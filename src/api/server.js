@@ -9,7 +9,7 @@ connectMongo();
 
 app.use("/form", formRoutes);
 
-app.get("/", () => {
+app.get("/", (req, res) => {
   res.send("Server is listening");
 });
 
