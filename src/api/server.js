@@ -8,6 +8,11 @@ const port = Port || 3000;
 connectMongo();
 
 app.use("/form", formRoutes);
+
+app.get("/", () => {
+  res.send("Server is listening");
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
