@@ -7,7 +7,6 @@ const formSchema = new mongoose.Schema({
   },
   companyName: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
