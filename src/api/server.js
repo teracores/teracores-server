@@ -2,8 +2,10 @@ import express from "express";
 import { Port } from "../config/config.js";
 import connectMongo from "../db/connectMongoose.js";
 import formRoutes from "../routes/formRoutes.js";
+import cors from "cors";
 const app = express();
 app.use(express.json());
+app.use(cors());
 const port = Port || 3000;
 connectMongo();
 
